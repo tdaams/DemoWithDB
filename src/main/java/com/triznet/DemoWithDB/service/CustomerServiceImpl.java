@@ -75,14 +75,4 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
-    public Customer getCustomerByLastName2(String lastName) {
-        Customer customer = customerRepository.findByLastNameIgnoreCase(lastName);
-        if (customer == null) {
-            throw new RecordNotFoundException();
-        }
-        else {
-            return customer;
-        }
-    }
-
 }
